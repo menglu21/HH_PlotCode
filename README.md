@@ -1,5 +1,5 @@
 # HH_PlotCode
-## the directory b_eff contains the btag efficiencies for all the MC processes, two working points are included (Loose and Medium), three flavors are included (light, c-quark, b-quark)
+### the directory b_eff contains the btag efficiencies for all the MC processes, two working points are included (Loose and Medium), three flavors are included (light, c-quark, b-quark)
 * step 0: login to lxplus8, create a directory for the plot code under your WORK/DIRECTORY, HH_Plot
 * step 1:
   ```
@@ -34,4 +34,8 @@
   ../checkjobs DY
   ```
   if the size of some files are 1.0K or 4.0K, you can remove those files.
-  
+* step 5, go to directory Plot, get ready for the plots. 
+  ```
+  cd Plot
+  python3 plot.py ../TT_muon_CR/ Btag 2017 1
+  ```
