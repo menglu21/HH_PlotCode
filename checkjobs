@@ -1,0 +1,6 @@
+for ifile in $(find $1 -maxdepth 1 -type d)
+do 
+  if [[ $ifile == *"$1_"* ]]; then
+    du -h $ifile/*.root
+  fi
+done

@@ -1,0 +1,13 @@
+Universe = vanilla
+Notification = Error
+Output = condor_output
+Log = condor_log
+Error = condor_error
+
+transfer_input_files = ../make_hists.py, ../HH.h, ../eleIDSF.root, ../muIDSF.root, ../TriggerSF_ele.root, ../TriggerSF_mu.root, ../bEff.root
+Executable =DUMMY_$(Process)/wrapper.sh
+Initialdir = DUMMY_$(Process)
+notification = Error
+when_to_transfer_output = ON_EXIT
++JobFlavour = "nextweek"
+queue NUMBER
